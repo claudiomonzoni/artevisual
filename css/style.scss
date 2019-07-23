@@ -273,7 +273,7 @@ button {
         font-size: calc(12px + (18 - 12) * ((100vw - 300px) / (1600 - 300)));
 
         @include cel {
-          font-size: 0.9em;
+          font-size: 1.2em;
         }
       }
     }
