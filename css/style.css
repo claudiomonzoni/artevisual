@@ -244,6 +244,12 @@ button {
   font-size: calc(12px + (18 - 12) * ((100vw - 300px) / (1600 - 300)));
 }
 
+@media (max-width: 479px) {
+  #menu li ul a {
+    font-size: 0.9em;
+  }
+}
+
 #menu li:hover ul {
   visibility: visible;
   opacity: 1;
