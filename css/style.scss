@@ -336,6 +336,25 @@ button {
   }
 }
 
+#heroInt {
+  margin: 0;
+  padding: 0;
+  grid-column: 2 / -1;
+
+  img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+  }
+
+  @include cel {
+    img {
+      height: 90vh;
+      object-fit: cover;
+    }
+  }
+}
+
 #intro {
   .ancla {
     grid-column: 2 / -1;
@@ -357,6 +376,58 @@ button {
   p {
     padding-bottom: 2em;
     border-bottom: solid 1px $azul;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    input,
+    textarea {
+      background: $gris;
+      border-top: none;
+      border-right: none;
+      border-left: none;
+      padding: 0.5em;
+      margin-bottom: 1em;
+    }
+  }
+}
+
+#introBanInt {
+  background-color: $gris;
+  grid-column: 1 / span 2;
+  grid-row: 1 / -1;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    font-size: calc(45px + (65 - 45) * ((100vw - 300px) / (1600 - 300)));
+    color: $cafeOscuro;
+    font-weight: 700;
+    border-bottom: solid 1px $cafeOscuro;
+    grid-column: 2 / span 1;
+  }
+}
+
+#introBanIntSing {
+  background-color: $gris;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15%;
+  @include cel {
+    padding: 15vh 10vw;
+  }
+  h1 {
+    font-size: calc(35px + (55 - 35) * ((100vw - 300px) / (1600 - 300)));
+    color: $cafeOscuro;
+    font-weight: 700;
+    border-bottom: solid 1px $cafeOscuro;
+    grid-column: 2 / span 1;
   }
 }
 
@@ -390,8 +461,11 @@ button {
   }
 }
 
-#sesiones {
+.empujar {
   @include empujar(-20vh);
+}
+
+#sesiones {
   grid-template-rows: 1fr 1fr;
 
   @include cel {
@@ -624,6 +698,164 @@ button {
       margin: 0.2em;
       a {
         color: $azul;
+      }
+    }
+  }
+}
+
+#subEncabezado {
+  .vacioColor {
+    @include vacioColor($azul, 40%);
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
+  }
+
+  #fondoCafeSub {
+    background-color: $cafeOscuro;
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    color: #fff;
+    height: 50vh;
+    min-height: 50vh;
+    padding: 0 20%;
+    @include cel {
+      padding: 0 10vw;
+      min-height: 10vh;
+    }
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+      color: #fff;
+    }
+    p {
+      border-bottom: solid 1px #fff;
+      padding: 0 0 1em;
+    }
+  }
+}
+
+#subEncabezado2 {
+  .vacioColor {
+    @include vacioColor($cafeOscuro, 40%);
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
+  }
+
+  #fondoCafeSub {
+    background-color: $azul;
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    color: #fff;
+    height: 50vh;
+    padding: 0 20%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+      color: #fff;
+    }
+    p {
+      border-bottom: solid 1px #fff;
+      padding: 0 0 1em;
+    }
+  }
+}
+
+#dir {
+  grid-column: 2 / span 1;
+  text-align: center;
+  padding-bottom: 5em;
+  i {
+    color: $cafeOscuro;
+    font-size: 4em;
+    padding: 1.5em 0 0.3em;
+  }
+  hr {
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 1px $azul;
+  }
+  a {
+    color: $cafeOscuro;
+  }
+}
+
+#mapa {
+  background-color: $azul;
+  grid-column: 1 / span 2;
+  height: 70vh;
+  margin-bottom: 5em;
+}
+
+.comparte {
+  grid-column: 2 / span 1;
+  border-top: solid 1px $cafeOscuro;
+
+  h3 {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+    font-size: calc(22px + (30 - 22) * ((100vw - 300px) / (1600 - 300)));
+  }
+  color: $cafeOscuro;
+  margin: 5em 0;
+}
+
+.listaSingle {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1600 - 300)));
+
+  ul {
+    align-self: flex-start;
+  }
+
+  li {
+    list-style: none;
+    flex: 1 1 35%;
+    margin: 0.5em;
+    @include cel {
+      flex: 0 0 100%;
+      margin: 0.5em 0;
+    }
+  }
+  span {
+    font-weight: 700;
+  }
+}
+
+#singleBandeja {
+  grid-column: 2 / span 1;
+  p {
+    padding: 10vw;
+  }
+  .video {
+    margin-bottom: 10vw;
+  }
+  #columnas {
+    column-count: 2;
+    @include cel {
+      column-count: 1;
+    }
+
+    .foto {
+      @extend .anima;
+      img {
+        width: 100%;
+        height: auto;
+      }
+      &:hover {
+        transform: scale(1.2);
       }
     }
   }
