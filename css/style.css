@@ -429,7 +429,7 @@ button {
 
 @media (max-width: 479px) {
   #introBanIntSing {
-    padding: 15vh 10vw;
+    padding: 8vh 10vw;
   }
 }
 
@@ -959,6 +959,12 @@ button {
           justify-content: center;
 }
 
+@media (max-width: 479px) {
+  #subEncabezado2 #fondoCafeSub {
+    padding: 2em;
+  }
+}
+
 #subEncabezado2 #fondoCafeSub h2 {
   color: #fff;
 }
@@ -1089,5 +1095,252 @@ button {
 #singleBandeja #columnas .foto:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+}
+
+#listaServicios {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2 / span 2;
+  background-color: #2b4162;
+  color: #fff;
+  font-weight: 300;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 2em;
+}
+
+@media (max-width: 479px) {
+  #listaServicios {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / span 1;
+    padding-left: 0;
+  }
+}
+
+#listaServicios ul {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / span 1;
+}
+
+@media (max-width: 479px) {
+  #listaServicios ul {
+    grid-column: 1 / -1;
+    padding: 0 2em 4em 2em;
+  }
+  #listaServicios ul li {
+    list-style: none;
+    padding: 0.4em 0;
+  }
+}
+
+#listaServicios #videoCobertura {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / span 1;
+}
+
+@media (max-width: 479px) {
+  #listaServicios #videoCobertura {
+    grid-column: 1 / -1;
+  }
+}
+
+#gruposYcon {
+  grid-column: 1 / -1;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+#gruposYcon h2 {
+  color: #fcdebe;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#gruposYcon .izqCafe {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / span 1;
+  background-color: #928779;
+  height: 30vh;
+  padding: 5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#gruposYcon .derGris {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / span 1;
+  background-color: #f4f2f4;
+  padding: 5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#imacon img {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / span 1;
+}
+
+@media (max-width: 479px) {
+  #imacon img {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / span 2;
+  }
+}
+
+#imacon .vacioColor {
+  background-color: #fcdebe;
+  height: 50%;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / span 1;
+}
+
+#cinemabodas .encabe {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / span 2;
+  background-color: #f4f2f4;
+  padding: 7vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#cinemabodas .encabe h2 {
+  font-weight: bold;
+}
+
+#cinemabodas .videobodas {
+  grid-column: 1 / -1;
+}
+
+#cinemabodas .videobodas .itemBodaVideo {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+#cinemabodas .videobodas .itemBodaVideo .bandetxtbodas {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / span 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+@media (max-width: 479px) {
+  #cinemabodas .videobodas .itemBodaVideo .bandetxtbodas {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / span 2;
+    padding: 4em 0;
+  }
+}
+
+#cinemabodas .videobodas .itemBodaVideo .bandejavideobodas {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / span 1;
+}
+
+@media (max-width: 479px) {
+  #cinemabodas .videobodas .itemBodaVideo .bandejavideobodas {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / span 2;
+  }
+}
+
+#cinemabodas .videobodas .itemBodaVideo:nth-child(2n + 1) .bandetxtbodas {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / span 1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / span 1;
+}
+
+@media (max-width: 479px) {
+  #cinemabodas .videobodas .itemBodaVideo:nth-child(2n + 1) .bandetxtbodas {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / span 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / span 1;
+    padding: 4em 0;
+  }
+}
+
+#cinemabodas .videobodas .itemBodaVideo:nth-child(2n + 1) .bandejavideobodas {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / span 1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / span 1;
+}
+
+@media (max-width: 479px) {
+  #cinemabodas .videobodas .itemBodaVideo:nth-child(2n + 1) .bandejavideobodas {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / span 2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / span 1;
+  }
+}
+
+#infoconta p {
+  background-color: #928779;
+  color: #fff;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / span 1;
+  padding: 10vh;
+  text-align: center;
+  margin: 0;
 }
 /*# sourceMappingURL=style.css.map */

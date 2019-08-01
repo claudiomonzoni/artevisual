@@ -420,7 +420,7 @@ button {
   align-items: center;
   padding: 0 15%;
   @include cel {
-    padding: 15vh 10vw;
+    padding: 8vh 10vw;
   }
   h1 {
     font-size: calc(35px + (55 - 35) * ((100vw - 300px) / (1600 - 300)));
@@ -758,6 +758,10 @@ button {
     align-items: center;
     justify-content: center;
 
+    @include cel {
+      padding: 2em;
+    }
+
     h2 {
       color: #fff;
     }
@@ -858,5 +862,149 @@ button {
         transform: scale(1.2);
       }
     }
+  }
+}
+#listaServicios {
+  grid-column: 2 / span 2;
+  background-color: $azul;
+  color: #fff;
+  font-weight: 300;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  padding-left: 2em;
+
+  @include cel {
+    grid-column: 2 / span 1;
+    padding-left: 0;
+  }
+  ul {
+    grid-column: 1 / span 1;
+    @include cel {
+      grid-column: 1 / -1;
+      padding: 0 2em 4em 2em;
+      li {
+        list-style: none;
+        padding: 0.4em 0;
+      }
+    }
+  }
+  #videoCobertura {
+    grid-column: 2 / span 1;
+    @include cel {
+      grid-column: 1 / -1;
+    }
+  }
+}
+
+#gruposYcon {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  h2 {
+    color: $crema;
+    align-self: center;
+  }
+  .izqCafe {
+    grid-column: 1 / span 1;
+    background-color: $cafeOscuro;
+    height: 30vh;
+    padding: 5vw;
+    display: flex;
+    justify-content: center;
+  }
+  .derGris {
+    grid-column: 2 / span 1;
+    background-color: $gris;
+    padding: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+#imacon {
+  img {
+    grid-column: 2 / span 1;
+    @include cel {
+      grid-column: 1 / span 2;
+    }
+  }
+  .vacioColor {
+    @include vacioColor($crema, 50%);
+    grid-column: 3 / span 1;
+  }
+}
+
+#cinemabodas {
+  .encabe {
+    grid-column: 1 / span 2;
+    background-color: $gris;
+    padding: 7vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h2 {
+      font-weight: bold;
+    }
+  }
+  .videobodas {
+    grid-column: 1 / -1;
+
+    .itemBodaVideo {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      .bandetxtbodas {
+        grid-column: 1 / span 1;
+
+        @include cel {
+          grid-column: 1 / span 2;
+          padding: 4em 0;
+        }
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+      }
+      .bandejavideobodas {
+        grid-column: 2 / span 1;
+        @include cel {
+          grid-column: 1 / span 2;
+        }
+      }
+
+      &:nth-child(2n + 1) {
+        .bandetxtbodas {
+          grid-column: 2 / span 1;
+          grid-row: 1 / span 1;
+          @include cel {
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 1;
+            padding: 4em 0;
+          }
+        }
+        .bandejavideobodas {
+          grid-column: 1 / span 1;
+          grid-row: 1 / span 1;
+          @include cel {
+            grid-column: 1 / span 2;
+            grid-row: 2 / span 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+#infoconta {
+  p {
+    background-color: $cafeOscuro;
+    color: #fff;
+    grid-column: 2 / span 1;
+    padding: 10vh;
+    text-align: center;
+    margin: 0;
   }
 }
